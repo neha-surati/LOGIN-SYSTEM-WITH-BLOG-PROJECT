@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900 text-gray-200">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-orange-500">BLOG WEBSITE.</div>
+        <nav class="space-x-4 flex items-center">
+          <a href="#" class="text-orange-500">Home</a>
+          <a href="#">About Us</a>
+          <a href="#blog-section" class="text-orange-500">Blog</a>
+          <a href="#">Authors</a>
+          <a href="#">Contact Us</a>
+          <a href="/logout" class="bg-orange-500 px-4 py-2 rounded text-white"
+            >Logout</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <div class="container mx-auto px-4 py-8 flex">
+      <!-- Sidebar -->
+      <aside class="w-1/4 bg-gray-800 shadow p-4">
+        <h2 class="text-xl font-bold mb-4">Dashboard</h2>
+        <nav class="space-y-2">
+          <a href="#" class="block text-orange-500">Home</a>
+          <a href="/addblog" class="block text-orange-500">Add Blog</a>
+          <a href="#" class="block text-orange-500">Authors</a>
+          <a href="#" class="block text-orange-500">Contact Us</a>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <main class="w-3/4 ml-8">
+        <div class="grid grid-cols-3 gap-4">
+          <div class="relative">
+            <img
+              src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-1-720x480.jpg"
+              alt="Fashion"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-4 left-4 text-white">
+              <div class="font-bold text-orange-500">FASHION</div>
+              <div>Lorem Ipsum Dolor Sit Amet.</div>
+              <div class="text-sm">John Doe | 2024-06-06 | 3 Comments</div>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-2-720x480.jpg"
+              alt="Lifestyle"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-4 left-4 text-white">
+              <div class="font-bold text-orange-500">LIFESTYLE</div>
+              <div>Lorem Ipsum Dolor Sit Amet.</div>
+              <div class="text-sm">John Doe | 2024-06-06 | 3 Comments</div>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-3-720x480.jpg"
+              alt="Sport"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute bottom-4 left-4 text-white">
+              <div class="font-bold text-orange-500">SPORT</div>
+              <div>Lorem Ipsum Dolor Sit Amet.</div>
+              <div class="text-sm">John Doe | 2024-06-06 | 3 Comments</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Section -->
+        <section id="blog-section" class="py-8">
+          <h2 class="text-2xl font-bold mb-4">Blog</h2>
+          <div class="grid grid-cols-3 gap-4">
+            <% blogData.map((blog) => { %>
+            <div class="bg-gray-800 p-4 shadow">
+              <img
+                src="<%= blog.image %>"
+                alt="<%= blog.title %>"
+                class="w-full h-40 object-cover mb-4"
+              />
+              <h3 class="font-bold mb-2"><%= blog.title %></h3>
+              <p class="text-sm text-gray-400 mb-2"><%= blog.description %></p>
+              <div class="text-sm text-gray-400 mb-2">
+                <%= new Date(blog.date).toLocaleString('en-US', { month:
+                'short', day: '2-digit', year: 'numeric', hour: '2-digit',
+                minute: '2-digit' }) %>
+              </div>
+              <div class="flex space-x-2">
+                <a
+                  href="/editblog/<%= blog._id %>"
+                  class="bg-orange-500 text-white px-4 py-2 rounded"
+                  >Edit</a
+                >
+                <a
+                  href="/deleteblog/<%= blog._id %>"
+                  class="bg-orange-500 text-white px-4 py-2 rounded"
+                  >Delete</a
+                >
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-4">
+          <div class="text-orange-500 font-bold">
+            Lorem Ipsum dolor sit amet.
+          </div>
+          <button class="bg-orange-500 text-white px-4 py-2">SUBSCRIBE</button>
+        </div>
+        <div class="flex justify-between items-center text-sm">
+          <div>© 2024 BLOG WEBSITE. All rights reserved.</div>
+          <div class="space-x-4">
+            <a href="#" class="hover:underline">Facebook</a>
+            <a href="#" class="hover:underline">Twitter</a>
+            <a href="#" class="hover:underline">Behance</a>
+            <a href="#" class="hover:underline">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
