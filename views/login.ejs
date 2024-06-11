@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - Blog Website</title>
@@ -8,61 +8,69 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-</head>
-<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+  </head>
+  <body
+    class="bg-gray-900 text-white min-h-screen flex items-center justify-center"
+  >
     <!-- Login Section -->
     <section class="container mx-auto px-4 py-8">
-        <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-md">
-            <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
-            <form action="/login" method="POST">
-                <div class="mb-4">
-                    <label for="text" class="block text-gray-300 font-bold mb-2">Email</label>
-                    <input
-                        type="text"
-                        placeholder="Username"
-                        aria-label="Username"
-                        name="username"
-                        class="w-full px-3 py-2 border rounded-lg bg-gray-700 border-gray-600 text-white"
-                        required
-                    />
-                </div>
-                <div class="mb-4">
-                    <label for="password" class="block text-gray-300 font-bold mb-2">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        class="w-full px-3 py-2 border rounded-lg bg-gray-700 border-gray-600 text-white"
-                        placeholder="Enter your password"
-                        required
-                    />
-                </div>
-                <div class="flex items-center justify-between mb-4">
-                    <div>
-                        <input
-                            type="checkbox"
-                            id="remember"
-                            name="remember"
-                            class="mr-2"
-                        />
-                        <label for="remember" class="text-gray-300">Remember me</label>
-                    </div>
-                    <a href="#" class="text-blue-400 hover:underline">Forgot password?</a>
-                </div>
-                <div class="flex justify-center">
-                    <button
-                        type="submit"
-                        class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
-                    >
-                        Login
-                    </button>
-                </div>
-            </form>
-            <p class="mt-6 text-center text-gray-300">
-                Don't have an account?
-                <a href="/signup" class="text-blue-400 hover:underline">Sign up</a>
-            </p>
-        </div>
+      <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
+        <form action="/local" method="POST">
+          <div class="mb-4">
+            <label for="text" class="block text-gray-300 font-bold mb-2"
+              >Username</label
+            >
+            <input
+              type="text"
+              placeholder="Username"
+              aria-label="Username"
+              name="username"
+              class="w-full px-3 py-2 border rounded-lg bg-gray-700 border-gray-600 text-white"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="password" class="block text-gray-300 font-bold mb-2"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="w-full px-3 py-2 border rounded-lg bg-gray-700 border-gray-600 text-white"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <input
+                type="checkbox"
+                id="remember"
+                name="remember"
+                class="mr-2"
+              />
+              <label for="remember" class="text-gray-300">Remember me</label>
+            </div>
+            <a href="#" class="text-blue-400 hover:underline"
+              >Forgot password?</a
+            >
+          </div>
+          <div class="flex justify-center">
+            <button
+              type="submit"
+              class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
+            >
+              Login
+            </button>
+          </div>
+        </form>
+        <p class="mt-6 text-center text-gray-300">
+          Don't have an account?
+          <a href="/signup" class="text-blue-400 hover:underline">Sign up</a>
+        </p>
+      </div>
     </section>
-</body>
+  </body>
 </html>

@@ -18,8 +18,8 @@ const { isAuth, userAuth } = require("../middleware/user.auth");
 const passport = require("passport");
 const router = Router();
 
-// router.get("/", isAuth, indexPage);
-router.get("/", isAuth, home);
+//  router.get("/", isAuth, indexPage);
+ router.get("/", home);
 
 router.post("/addblog", uploadImage, addblog);
 router.get("/addblog", addblogPage);

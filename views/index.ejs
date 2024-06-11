@@ -8,23 +8,35 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrQkTyW+PAy0oVJ+mcEJ6Gb0+2XQ0oX1DrZ0hcbiMBl43A+uJl4TT+mefgmyUuFAFFmyFE2j0vHwaV9d4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font awsome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+      .bg-gradient {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      }
+    </style>
   </head>
   <body class="bg-gray-900 text-gray-200">
     <!-- Header -->
-    <header class="bg-gray-800 shadow">
+    <header class="bg-gray-800 shadow-lg">
       <div
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
-        <div class="text-2xl font-bold text-orange-500">BLOG WEBSITE.</div>
-        <nav class="space-x-4 flex items-center">
-          <a href="#" class="text-orange-500">Home</a>
-          <a href="#">About Us</a>
+        <div class="text-3xl font-extrabold text-orange-500">BLOG WEBSITE.</div>
+        <nav class="space-x-6 flex items-center">
+          <a href="#" class="hover:text-orange-500 transition-colors duration-300">Home</a>
+          <a href="#" class="hover:text-orange-500 transition-colors duration-300">About Us</a>
           <a href="#blog-section" class="text-orange-500">Blog</a>
-          <a href="#">Authors</a>
-          <a href="#">Contact Us</a>
-          <a href="/logout" class="bg-orange-500 px-4 py-2 rounded text-white"
-            >Logout</a
-          >
+          <a href="#" class="hover:text-orange-500 transition-colors duration-300">Authors</a>
+          <a href="#" class="hover:text-orange-500 transition-colors duration-300">Contact Us</a>
+          <a href="/logout" class="bg-orange-500 px-4 py-2 rounded text-white hover:bg-orange-600 transition-colors duration-300">Logout</a>
         </nav>
       </div>
     </header>
@@ -32,50 +44,50 @@
     <!-- Main Section -->
     <div class="container mx-auto px-4 py-8 flex">
       <!-- Sidebar -->
-      <aside class="w-1/4 bg-gray-800 shadow p-4">
-        <h2 class="text-xl font-bold mb-4">Dashboard</h2>
-        <nav class="space-y-2">
-          <a href="#" class="block text-orange-500">Home</a>
-          <a href="/addblog" class="block text-orange-500">Add Blog</a>
-          <a href="#" class="block text-orange-500">Authors</a>
-          <a href="#" class="block text-orange-500">Contact Us</a>
+      <aside class="w-1/4 bg-gray-800 shadow-lg p-6 rounded-lg">
+        <h2 class="text-xl font-bold mb-6">Dashboard</h2>
+        <nav class="space-y-4">
+          <a href="#" class="block hover:text-orange-500 transition-colors duration-300">Home</a>
+          <a href="/addblog" class="block hover:text-orange-500 transition-colors duration-300">Add Blog</a>
+          <a href="#" class="block hover:text-orange-500 transition-colors duration-300">Authors</a>
+          <a href="#" class="block hover:text-orange-500 transition-colors duration-300">Contact Us</a>
         </nav>
       </aside>
 
       <!-- Content -->
       <main class="w-3/4 ml-8">
-        <div class="grid grid-cols-3 gap-4">
-          <div class="relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
             <img
               src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-1-720x480.jpg"
               alt="Fashion"
-              class="w-full h-full object-cover"
+              class="w-full h-56 object-cover transition-transform duration-500 transform group-hover:scale-110"
             />
-            <div class="absolute bottom-4 left-4 text-white">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-white">
               <div class="font-bold text-orange-500">FASHION</div>
               <div>Lorem Ipsum Dolor Sit Amet.</div>
               <div class="text-sm">John Doe | 2024-06-06 | 3 Comments</div>
             </div>
           </div>
-          <div class="relative">
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
             <img
               src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-2-720x480.jpg"
               alt="Lifestyle"
-              class="w-full h-full object-cover"
+              class="w-full h-56 object-cover transition-transform duration-500 transform group-hover:scale-110"
             />
-            <div class="absolute bottom-4 left-4 text-white">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-white">
               <div class="font-bold text-orange-500">LIFESTYLE</div>
               <div>Lorem Ipsum Dolor Sit Amet.</div>
               <div class="text-sm">John Doe | 2024-06-06 | 3 Comments</div>
             </div>
           </div>
-          <div class="relative">
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
             <img
               src="https://demo.phpjabbers.com/free-web-templates/blog-website-template-172/assets/images/blog-3-720x480.jpg"
               alt="Sport"
-              class="w-full h-full object-cover"
+              class="w-full h-56 object-cover transition-transform duration-500 transform group-hover:scale-110"
             />
-            <div class="absolute bottom-4 left-4 text-white">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-white">
               <div class="font-bold text-orange-500">SPORT</div>
               <div>Lorem Ipsum Dolor Sit Amet.</div>
               <div class="text-sm">John Doe | 2024-06-06 | 3 Comments</div>
@@ -84,34 +96,42 @@
         </div>
 
         <!-- Blog Section -->
-        <section id="blog-section" class="py-8">
-          <h2 class="text-2xl font-bold mb-4">Blog</h2>
-          <div class="grid grid-cols-3 gap-4">
+        <section id="blog-section" class="py-12">
+          <h2 class="text-3xl font-bold mb-8 text-center">Blog</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <% blogData.map((blog) => { %>
-            <div class="bg-gray-800 p-4 shadow">
-              <img
-                src="<%= blog.image %>"
-                alt="<%= blog.title %>"
-                class="w-full h-40 object-cover mb-4"
-              />
-              <h3 class="font-bold mb-2"><%= blog.title %></h3>
-              <p class="text-sm text-gray-400 mb-2"><%= blog.description %></p>
-              <div class="text-sm text-gray-400 mb-2">
-                <%= new Date(blog.date).toLocaleString('en-US', { month:
-                'short', day: '2-digit', year: 'numeric', hour: '2-digit',
-                minute: '2-digit' }) %>
+            <div class="bg-gray-800 p-6 shadow-lg rounded-lg">
+              <div class="relative group overflow-hidden rounded-lg">
+                <img
+                  src="<%= blog.image %>"
+                  alt="<%= blog.title %>"
+                  class="w-full h-48 object-cover mb-4 transition-transform duration-500 transform group-hover:scale-110"
+                />
               </div>
-              <div class="flex space-x-2">
+              <h3 class="font-bold mb-2 text-xl"><%= blog.title %></h3>
+              <p class="text-sm text-gray-400 mb-4"><%= blog.description %></p>
+              <div class="text-sm text-gray-400 mb-4">
+                <%= new Date(blog.date).toLocaleString('en-US', { month: 'short', day: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }) %>
+              </div>
+              <div class="flex space-x-4">
                 <a
                   href="/editblog/<%= blog._id %>"
-                  class="bg-orange-500 text-white px-4 py-2 rounded"
-                  >Edit</a
+                  class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors duration-300 flex items-center"
                 >
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536M16.732 3.732a2.5 2.5 0 113.536 3.536L7 20.5 3 21l.5-4L16.732 3.732z"></path>
+                  </svg>
+                  Edit
+                </a>
                 <a
                   href="/deleteblog/<%= blog._id %>"
-                  class="bg-orange-500 text-white px-4 py-2 rounded"
-                  >Delete</a
+                  class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-red-500 transition-colors duration-300 flex items-center"
                 >
+                  <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                  Delete
+                </a>
               </div>
             </div>
             <% }) %>
@@ -121,21 +141,29 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-800 text-white py-12">
       <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center mb-4">
-          <div class="text-orange-500 font-bold">
+        <div class="flex justify-between items-center mb-8">
+          <div class="text-xl font-bold text-orange-500">
             Lorem Ipsum dolor sit amet.
           </div>
-          <button class="bg-orange-500 text-white px-4 py-2">SUBSCRIBE</button>
+          <button class="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors duration-300">SUBSCRIBE</button>
         </div>
         <div class="flex justify-between items-center text-sm">
           <div>© 2024 BLOG WEBSITE. All rights reserved.</div>
-          <div class="space-x-4">
-            <a href="#" class="hover:underline">Facebook</a>
-            <a href="#" class="hover:underline">Twitter</a>
-            <a href="#" class="hover:underline">Behance</a>
-            <a href="#" class="hover:underline">LinkedIn</a>
+          <div class="space-x-6">
+            <a href="#" class="hover:text-orange-500 transition-colors duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="hover:text-orange-500 transition-colors duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="hover:text-orange-500 transition-colors duration-300">
+              <i class="fab fa-behance"></i>
+            </a>
+            <a href="#" class="hover:text-orange-500 transition-colors duration-300">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
       </div>

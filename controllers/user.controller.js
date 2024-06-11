@@ -25,15 +25,21 @@ const home = async (req, res) => {
   }
 };
 
+// const home = async (req, res) => {
+//   let data = await user.find();
+//   res.send(data);
+// };
+
 const signup = async (req, res) => {
   let data = await user.create(req.body);
   return res.redirect("/login");
 };
 
 const login = async (req, res) => {
-  const { email, password } = req.body;
+  const { username, password } = req.body;
+  console.log(req.body);
 
-  let User = await user.findOne({ email: email });
+  let User = await user.findOne({ username: username });
 
   if (User) {
     if (User.password === password) {
@@ -78,11 +84,11 @@ const deleteblog = async (req, res) => {
 
 const editblog = async (req, res) => {
   const { id } = req.params;
-    blogId = id;
+  blogId = id;
   try {
-    const  data = await blogDB.findById(id);
+    const data = await blogDB.findById(id);
     // console.log(blog);
-    return res.render("editblog",{ blogData: data  });
+    return res.render("editblog", { blogData: data });
   } catch (error) {
     console.log(error);
   }
@@ -152,5 +158,6 @@ module.exports = {
   deleteblog,
   editblog,
   updateblog,
-  logout,local
+  logout,
+  local,
 };
