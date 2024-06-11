@@ -87,7 +87,7 @@ const editblog = async (req, res) => {
   blogId = id;
   try {
     const data = await blogDB.findById(id);
-    // console.log(blog);
+    //  console.log(data);
     return res.render("editblog", { blogData: data });
   } catch (error) {
     console.log(error);
@@ -123,7 +123,7 @@ const updateblog = async (req, res) => {
 };
 
 const logout = (req, res) => {
-  res.clearCookie("user");
+  // res.clearCookie("user");
   res.redirect("/login");
 };
 

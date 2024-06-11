@@ -19,7 +19,7 @@ const passport = require("passport");
 const router = Router();
 
 //  router.get("/", isAuth, indexPage);
- router.get("/", home);
+router.get("/", isAuth, home);
 
 router.post("/addblog", uploadImage, addblog);
 router.get("/addblog", addblogPage);
